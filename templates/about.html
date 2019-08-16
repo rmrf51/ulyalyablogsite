@@ -1,0 +1,173 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% comment %} {% block content %}
+
+
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-4">
+                <img src="https://sun9-12.userapi.com/c858032/v858032681/76fa/TwsRRBOKV20.jpg" class="img-thumbnail" alt="avatar">
+              </div>
+              <div class="col-lg-8">
+                <h2>Title</h2>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, perspiciatis voluptas nostrum iusto sapiente, ex provident necessitatibus praesentium, quas enim quia aut veniam et dignissimos? Impedit corrupti sit aliquam natus.</div>
+              </div>
+          </div>
+          <div class="row justify-content-center">
+                <div class="col-lg-2">
+                  Мой телефон: 8-800-555-35-35
+                </div>
+                <div class="col-lg-4">
+                        VK: vk.com / Facebook: Facebook.com / PornHub: pornhub.com
+                    </div>
+                <div class="col-lg-2">
+                  Slype: Ulaylya345
+                </div>
+
+              </div>
+      </div>
+
+
+
+{% endblock content %} {% endcomment %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #img{
+            margin-top: 20vh;
+            padding: 10px;
+            background: white;
+            float: left;
+        }
+
+        p{
+            margin-top: 20vh;
+        }
+
+        .bottom{
+            margin-top: 15vh;
+        }
+
+        li{
+            list-style-type: none;
+        }
+        @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+        .social a {
+            text-align: center;
+            width: 46px;
+            height: 46px;
+            float: left;
+            background: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+            border-radius: 46px;
+            margin: 0 10px 10px 0;
+            padding: 6px;
+            color: #000;
+        }
+        .github a:hover {background: #191919; color: #fff;}
+        .youtube a:hover {background: #c4302b; color: #fff;}
+        .google-pluse a:hover {background: #DD4B39; color: #fff;}
+        .twitter a:hover {background: #00acee; color: #fff;}
+        .instagram a:hover {background: #3f729b; color: #fff;}
+        .facebook a:hover {background: #3b5998; color: #fff;}
+        .skype a:hover {background: #00aff0; color: #fff;}
+        .vk a:hover {background: #5d84ae; color: #fff;}
+        .odnoklassniki a:hover {background: #f93; color: #fff;}
+        .pinterest a:hover {background: #c8232c; color: #fff;}
+        .linkedin a:hover {background: #0e76a8; color: #fff;}
+        .telegram a:hover {background: #249bd7; color: #fff;}
+        .tumblr a:hover {background: #34526f; color: #fff;}
+        .windows a:hover {background: #125acd; color: #fff;}
+        .whatsapp a:hover {background: #50b154; color: #fff;}
+        .weibo a:hover {background: #d52b2b; color: #fff;}
+        .dropbox a:hover {background: #1087dd; color: #fff;}
+ 
+    </style>
+</head>
+<body style = "background-color: whitesmoke">
+    <div style="background-color: whitesmoke;">
+        <div class="container">
+                <div class="row navbar navbar-light">
+                    <div class="col">
+                        <nav class="navbar navbar-light bg-faded">
+                            <a class="navbar-brand" href="{% url 'home' %}" style = "font-size: 30px; font-weight: bolder">Navbar</a>
+                        </nav>
+                    </div>
+
+                    <div class = "d-flex justify-content-end">
+                        <div class="col nav navbar-nav">
+                            <a class="nav-item nav-link" href="{% url 'home' %}" style = "font-size: 18px">Home</a>
+                        </div>
+                        <div class="col nav navbar-nav">
+                            <a class="nav-item nav-link active" href="{% url 'about' %}" style = "font-size: 18px">About</a>
+                        </div>    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "container">
+        <div class="row">
+            <div class="col-4 d-flex justify-content-center">
+                <img src="{% static 'css/images.jpg' %}" class = "rounded-circle" id = "img">
+            </div>
+            <div class="col d-flex align-self-center justify-content-start">
+                <p style = "text-align: justify">
+                    Вчера во время проведения разведоперации наша группа подверглась нападению неизвестного 
+                    противника в камуфляжной форме Алиенов. В результате эффективной обороны и стремительной 
+                    контратаки многочисленная группа боевиков была смята и отброшена. Среди личного состава 
+                    потерь нет. Бойцы разведгруппы проявили недюжие навыки владения оружием. Особо отличился 
+                    в бою взводный Кудряшев&nbsp;М.А., грамотно использовавший человеческие ресурсы 
+                    своего взвода. В результате операции были захвачены элементы внеземной культуры, которые 
+                    переданы аналитической группе.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class = "container" style = "margin-left: 17vw">
+        <div class="row bottom">
+            <div class="col-5">
+                <ul>
+                    <li>Телефон</li>
+                    <li style = "color: grey">8-499-999-99-99</li>
+                    <li style = "color: grey">8-900-999-99-99</li>
+                </ul>
+            </div>
+            <div class="col">
+                <li>Mail</li>
+                <li style = "color: grey">uliyana@yandex.ru</li>
+                <li></li>
+            </div>
+            <div class="col">
+                <li>Социальные сети</li>
+                <div class="social youtube">
+                    <a href="#" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
+                </div>
+                <div class="social instagram">
+                    <a href="#" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                </div>
+                <div class="social vk">
+                    <a href="#" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

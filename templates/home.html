@@ -1,0 +1,80 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+        {% comment %} <div style="background-image: url(img/cover-bg-1.jpg); height: 100vh;"> {% endcomment %}
+        {% comment %} <div class="container">
+                <div class="row navbar navbar-light">
+                    <div class="col">
+                        <nav class="navbar navbar-light bg-faded">
+                            <a class="navbar-brand" href="#" style = "font-size: 30px; font-weight: bolder">Navbar</a>
+                        </nav>
+                    </div>
+
+                    <div class = "d-flex justify-content-end">
+                        <div class="col nav navbar-nav">
+                            <a class="nav-item nav-link active" href="{% url 'home' %}" style = "font-size: 18px">Home</a>
+                        </div>
+                        <div class="col nav navbar-nav">
+                            <a class="nav-item nav-link" href="#" style = "font-size: 18px">About</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+  {% for post in object_list %}
+
+    {% comment %} <div class="post-entry">
+      <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+      <img src="{{ post.cover.url }}" alt="{{ post.title }}">
+      <p>{{ post.body | slice:":300"  }}</p>
+    </div> {% endcomment %}
+
+    {% comment %} <div class="container-fluid" style="background-color: teal; height: 100vh">      
+        <div class="row" style="height: 100vh">
+                <div class="col" style="background-color:  teal">
+                    <img src = "{{ post.cover.url }}" class = "img" style = "padding-top: 5%; padding-left: 50%">
+                </div>
+                <div class = "d-flex align-self-center" style="background-color:  teal">
+                    <div class="col d-flex flex-column">
+                        <h1>{{ post.title }}</h1>
+                        <a href = "{% url 'post_detail' post.pk %}" class="d-flex align-self-center btn btn-outline-light" style = "font-size: larger; font-weight: 600; color: whitesmoke"  role="button" aria-pressed="true">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+    {% comment %} <div class="container-fluid blogPost d-flex align-items-center">
+            <div class="row container-fluid align-self-stretch">
+                <div class="col-lg-6 image-container-my"> <img src="{{ post.cover.url }}" class="img-fluid" alt="Responsive image"></div>  
+                <div class="col-lg-6 d-flex align-items-center"> 
+                    <div class="d-flex flex-column">
+                        <div class=""><h2>{{ post.title }}</h2></div>
+                        <div class=" align-self-center"> <a class="btn btn-outline-light link-button-my" href="{% url 'post_detail' post.pk %}">Learn more</a></div>
+                    </div>
+                </div>
+            </div>  
+    </div>  {% endcomment %}
+
+    <div class="container-fluid" style="background-color: teal;">      
+        <div class="row">
+            <div class = "col-md-6 d-flex justify-content-center">
+                <img class = "mb-4 mt-4 img-fluid" src = "{{ post.cover.url }}">
+            </div>
+            <div class = "col-md-6">
+                <div>
+                    <h1 class = "mb-4 mt-4 mr-4" style = "color: whitesmoke; text-align: justify;">{{ post.title }}</a>
+                </div>
+                <div class = "d-flex justify-content-center">
+                    <a href = "{% url 'post_detail' post.pk %}" class="btn btn-outline-light" style = "color: whitesmoke;"  role="button" aria-pressed="false">Learn more</a>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+  {% endfor %}
+{% endblock content %}
