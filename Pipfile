@@ -4,3 +4,7 @@ python_version = "3.7.3"
 [packages]
 django = "*"
 gunicorn = "==19.9.0"
+whitenoise = "*"
+
+[dev-packages]
+autopep8 = "*"
